@@ -158,7 +158,7 @@ currentPage = {
         update: function(){
 			renderLastBlock();
             updateText('networkHeight', lastStats.height);
-            updateText('networkTransactions', lastStats.tx_count.toString());
+            updateText('networkTransactions', lastStats.tx_count);
             updateText('networkHashrate', getReadableHashRateString(lastStats.difficulty / blockTargetInterval));
             updateText('networkDifficulty', getReadableDifficultyString(lastStats.difficulty, 0).toString());
 			$("time.timeago").timeago();
