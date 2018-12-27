@@ -345,7 +345,7 @@ $('#goto-height').keyup(function(e){
 				loadHeight = parseInt(urlParam('height'));
             else
 //				loadHeight = lastStats.last_known_block_index;
-				console.log(loadHeight)
+				console.log(lastStats.height)
 				loadHeight = lastStats.height - 1;
 		
 		if((loadHeight - 31) < 0){
