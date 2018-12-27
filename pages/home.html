@@ -341,12 +341,15 @@ $('#goto-height').keyup(function(e){
 		
 		var loadHeight;
 		
-		if (urlParam('height')) 
-				loadHeight = parseInt(urlParam('height'));
-            else
-//				loadHeight = lastStats.last_known_block_index;
-				console.log(lastStats.height)
-				loadHeight = lastStats.height - 1;
+		if (urlParam('height')){
+			loadHeight = parseInt(urlParam('height'));
+			console.log(loadHeight)
+		}
+		else{
+			//loadHeight = lastStats.last_known_block_index;
+			console.log(lastStats.height)
+			loadHeight = lastStats.height - 1;
+		}
 		
 		if((loadHeight - 31) < 0){
 			$('#prev-page').addClass('disabled');
