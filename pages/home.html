@@ -345,6 +345,7 @@ $('#goto-height').keyup(function(e){
 				loadHeight = parseInt(urlParam('height'));
             else
 //				loadHeight = lastStats.last_known_block_index;
+				console.log(loadHeight)
 				loadHeight = lastStats.height - 1;
 		
 		if((loadHeight - 31) < 0){
@@ -366,8 +367,8 @@ $('#goto-height').keyup(function(e){
 				dataType: 'json',
 				cache: 'false',
 				success: function(data){
-					console.log(data)
-					console.log(loadHeight)
+					//console.log(data)
+					//console.log(loadHeight)
 					renderBlocks(data.result.blocks);
 				}
 			});
